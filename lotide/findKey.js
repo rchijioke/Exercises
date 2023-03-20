@@ -1,10 +1,14 @@
-const assertEqual = function(actual, expected) {
 
-  if(actual === expected){
-   console.log("✅ ✅ ✅","Assertion Passed: " + actual +" === " + expected)
-  }
-  else return console.log("🛑 🛑 🛑", "Assertion Failed: " + actual+ " !== " + expected)
-  };
+  const assertEqual = require("./assertEqual")
+
+  /**
+   * the function below searches through an object to find a specific key based on the result of a callback function provided by the user.
+   * its uses
+   * @param {*} object 
+   * @param {*} callBack 
+   * @returns 
+   * If none of the callBack function calls return true, the function returns undefined.
+   */
 
   const findKey = function(object, callBack){
   
