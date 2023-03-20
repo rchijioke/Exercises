@@ -1,9 +1,13 @@
 const eqObjects = require("./eqObjects")
 
 
-// FUNCTION IMPLEMENTATION
+/**
+ * our assertObjectsEqual function which will help us easily test functions that return objects
+ * @param {*} actual 
+ * @param {*} expected 
+ */
 const assertObjectsEqual = function(actual, expected) {
-  // Implement me!
+  
   const inspect = require('util').inspect;
   console.log(`Example label: ${inspect(actual)}`);
 

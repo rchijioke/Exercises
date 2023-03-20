@@ -1,11 +1,12 @@
-const assertEqual = function(actual, expected) {
-  if(actual === expected){
-   console.log("✅ ✅ ✅","Assertion Passed: " + actual +" === " + expected)
-  }
-  else { 
-    return console.log("🛑 🛑 🛑", "Assertion Failed: " + actual+ " !== " + expected)
-  }
-}
+
+
+const assertEqual = require("./assertEqual")
+
+/**
+ * the countLetters function should take in a sentence (as a string) and then return a count of each of the letters in that sentenc
+ * @param {*} sentence 
+ * @returns 
+ */
 const countLetters = function(sentence){
       const result = {}
       for(let i=0; i< sentence.length; i++){
