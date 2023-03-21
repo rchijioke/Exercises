@@ -1,5 +1,6 @@
 
 const eqObjects = require("../eqObjects")
+const assertEqual = require("../assertEqual")
 
 
 const shirtObject = { color: "red", size: "medium" };
@@ -15,3 +16,7 @@ console.log(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject)); /
 
 const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 console.log(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject)); // => false
+
+console.log(eqObjects({a:1, b:2}, {b:1, a:1})); // => false
+console.log(eqObjects({a:1, b:[1,2]}, {b:[1,3], a:1})); // => false
+console.log(eqObjects({a:[1,2], b:1}, {a:[1,2], b:2})); // => false
